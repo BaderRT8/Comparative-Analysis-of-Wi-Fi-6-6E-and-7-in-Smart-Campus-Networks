@@ -1,0 +1,53 @@
+clear;
+clc;
+users = [50 300 900];
+
+wifi6_throughput  = [850 420 150];
+wifi6e_throughput = [1200 850 450];
+wifi7_throughput  = [2000 1600 1100];
+
+figure;
+plot(users, wifi6_throughput, '-o', 'LineWidth', 2);
+hold on;
+plot(users, wifi6e_throughput, '-s', 'LineWidth', 2);
+plot(users, wifi7_throughput, '-^', 'LineWidth', 2);
+grid on;
+
+xlabel('Number of Users');
+ylabel('Throughput (Mbps)');
+title('Throughput Comparison of Wi-Fi 6, Wi-Fi 6E, and Wi-Fi 7');
+legend('Wi-Fi 6', 'Wi-Fi 6E', 'Wi-Fi 7');
+
+
+wifi6_latency  = [10 25 60];
+wifi6e_latency = [7 15 35];
+wifi7_latency  = [2 5 12];
+
+figure;
+plot(users, wifi6_latency, '-o', 'LineWidth', 2);
+hold on;
+plot(users, wifi6e_latency, '-s', 'LineWidth', 2);
+plot(users, wifi7_latency, '-^', 'LineWidth', 2);
+grid on;
+
+xlabel('Number of Users');
+ylabel('Latency (ms)');
+title('Latency Comparison of Wi-Fi 6, Wi-Fi 6E, and Wi-Fi 7');
+legend('Wi-Fi 6', 'Wi-Fi 6E', 'Wi-Fi 7');
+
+wifi6_jitter  = [2.0 6.5 15.0];
+wifi6e_jitter = [1.3 3.2 8.0];
+wifi7_jitter  = [0.4 1.1 2.5];
+
+figure;
+plot(users, wifi6_jitter, '-o', 'LineWidth', 2);
+hold on;
+plot(users, wifi6e_jitter, '-s', 'LineWidth', 2);
+plot(users, wifi7_jitter, '-^', 'LineWidth', 2);
+grid on;
+
+xlabel('Number of Users');
+ylabel('Jitter (ms)');
+title('Jitter Comparison of Wi-Fi 6, Wi-Fi 6E, and Wi-Fi 7');
+legend('Wi-Fi 6', 'Wi-Fi 6E', 'Wi-Fi 7');
+
